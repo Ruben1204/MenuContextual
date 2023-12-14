@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MenuContextual.MainPage">
+
+    <ScrollView>
+        <!-- Primer ejemplo como crear un menu contextual-->
+        <!--<WebView x:Name="vistaWeb"
+                 Source="https://learn.microsoft.com/dotnet/maui"
+                 MinimumHeightRequest="400">
+            <FlyoutBase.ContextFlyout>
+                <MenuFlyout>
+                    <MenuFlyoutItem Text="Ir al repositorio de la documentación"
+                                    Clicked="MenuFlyoutItem_Clicked"
+                                    CommandParameter="docs"/>
+                    <MenuFlyoutItem Text="Ir al repositorio de ingenieria"
+                                    Clicked="MenuFlyoutItem_Clicked"
+                                    CommandParameter="eng"/>       
+                </MenuFlyout>
+            </FlyoutBase.ContextFlyout>
+        </WebView>-->
+        <!-- Segundo  ejemplo como crear un Submenu-->
+        <!--<Label x:Name="Lbl1" Text="Haz click derecho para escoger un Color.">
+            <FlyoutBase.ContextFlyout>
+                <MenuFlyout>
+                    <MenuFlyoutItem Text="Negro"
+                                    Clicked="MenuFlyoutItem_Clicked_1"
+                                    CommandParameter="Black"/>
+
+                    <MenuFlyoutSubItem Text="Claro">
+                        <MenuFlyoutItem Text="Azul"
+                                        Clicked="MenuFlyoutItem_Clicked_1"
+                                        CommandParameter="LightBlue"/>
+                        <MenuFlyoutItem Text="Coral"
+                                         Clicked="MenuFlyoutItem_Clicked_1"
+                                         CommandParameter="LightCoral"/> 
+                    </MenuFlyoutSubItem>
+
+                    <MenuFlyoutSubItem Text="Oscuro">
+                        <MenuFlyoutItem Text="Azul"
+                                        Clicked="MenuFlyoutItem_Clicked_1"
+                                        CommandParameter="LightBlue"/>
+                        <MenuFlyoutItem Text="Magenta"
+                                        Clicked="MenuFlyoutItem_Clicked_1"
+                                        CommandParameter="LightMagenta"/>
+                    </MenuFlyoutSubItem>
+                </MenuFlyout>
+            </FlyoutBase.ContextFlyout>
+        </Label>-->
+
+        <!-- Tercer ejemplo como mostrar iconos en los elementos del menu-->
+        <Button Text="&#x25B6;&#xFE0F; Play"
+                WidthRequest="120"
+                HeightRequest="80">
+            <FlyoutBase.ContextFlyout>
+                <MenuFlyout>
+                    <MenuFlyoutItem Text="Pause"
+                                    Clicked="MenuFlyoutItem_Clicked">
+                        <MenuFlyoutItem.IconImageSource>
+                            <FontImageSource Glyph="&#x23F8;"
+                                             FontFamily="Arial"/>
+                        </MenuFlyoutItem.IconImageSource>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem Text="Stop"
+                                    Clicked="MenuFlyoutItem_Clicked_2">
+                        <MenuFlyoutItem.IconImageSource>
+                            <FontImageSource Glyph="&#x23F9;"
+                                             FontFamily="Arial"/>
+                        </MenuFlyoutItem.IconImageSource>
+                    </MenuFlyoutItem>
+                </MenuFlyout>
+            </FlyoutBase.ContextFlyout>
+            
+        </Button>
+    </ScrollView>
+
+</ContentPage>
